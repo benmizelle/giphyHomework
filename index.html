@@ -91,12 +91,11 @@
 
               var par = $("<p>").text("Rating: " + rating);
 
-              
+            actorImage.attr("src", results[i].images.fixed_height.url);
 
-              actorImage.attr("src", results[i].images.fixed_height.url);
-
-              gifDiv.append(par);
               gifDiv.append(actorImage);
+              gifDiv.append(par);
+              
 
               $("#gifs-zone").prepend(gifDiv);
             }
@@ -144,8 +143,5 @@
 
 
   </script>
-
-
 </body>
-
 </html>
