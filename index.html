@@ -79,7 +79,7 @@
           
           var results = response.data;
 
-          for (var i = 0; i < results.length; i++) {
+          for (var i = 0; i < 10; i++) {
 
             if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
@@ -93,15 +93,45 @@
 
             actorImage.attr("src", results[i].images.fixed_height.url);
 
+            var animate = results[i].images.fixed_height.url;
+
+            var still = results[i].images.fixed_height_still.url;
+
+            var src = still;
+
               gifDiv.append(actorImage);
               gifDiv.append(par);
               
+          
+// ***won't work ??? ***
+        // var image = $("<img src =" + src +">");
+        // image.attr('animate',animate);
+        // image.attr('still', still);
+        // image.attr('data-state', 'still');
 
-              $("#gifs-zone").prepend(gifDiv);
-            }
-          }
-        });
-    }
+        // image.addClass('gif');
+
+    // $(".gif").on("click", function () {
+        // var state = $(this).attr("data-state");
+
+          // if (state === 'still') {
+
+            // $(this).attr("src", $(this).attr('animate'));
+          
+          // }
+          
+          // else  {
+          // $(this).attr("src", still);
+          // $(this).attr("data-state", 'still');
+// }
+
+// }); 
+
+          $("#gifs-zone").prepend(gifDiv);
+       }
+     }
+  });
+}
 
       function renderButtons() {
 
