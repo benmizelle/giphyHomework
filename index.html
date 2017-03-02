@@ -3,16 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
   <title>Actors Giphy Legion</title>
 
 <style type="text/css">
-    button,
+
     div,
-    form,
     input {
       margin: 5px;
+      display: inline-block;
+      font-size: 15px;
+      font-family: 'Playfair Display SC', serif;
+      color: #ffffff;
     }
+    body{
+      background-image: url("assets/images/background.png");
+    }
+    button, #add-actor{
+      background-color: #104E8B;
+      margin: 5px;
+      display: inline-block;
+      font-size: 15px;
+      font-family: 'Playfair Display SC', serif;
+      color: #ffffff;
+    }
+    #actor-form{
+      float: right;
+      margin-right: 150px;
+      margin-top: 50px;
+      font-size: 15px;
+      font-family: 'Playfair Display SC', serif;
+      color: #ffffff;
+    }
+    
   </style>
 
 </head>
@@ -85,7 +108,7 @@
 
         $("#actors-area").empty();
 
-        // Looping through the array of movies
+        // Looping through the array of actors
         for (var i = 0; i < actors.length; i++) {
 
           // Then dynamicaly generating buttons for each actor in the array
